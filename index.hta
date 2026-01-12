@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Event Experience</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #0e0e0e;
+    color: #fff;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: 
+        linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+        url('https://images.unsplash.com/photo-1520974735194-ec7a2c32a6ae') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+}
+
+/* TOP INFO */
+.hero-top {
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    text-align: right;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* TITLE */
+.hero h1 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.1;
+    max-width: 600px;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+/* CARD SECTION */
+.cards {
+    position: absolute;
+    bottom: 60px;
+    left: 80px;
+    right: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: rgba(20,20,20,0.95);
+    padding: 30px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-left: 3px solid #b11226;
+}
+
+.card.red {
+    background: #b11226;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 40px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        position: static;
+        margin-top: 60px;
+    }
+
+    .hero-top {
+        right: 40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <div class="hero-top">
+        <p>Date: July 17, 2026</p>
+        <p>Location: Arena, Moscow</p>
+    </div>
+
+    <h1>
+        SEE. FEEL.
+        <span>REMEMBER.</span>
+    </h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Beauty Stage Takeover</h3>
+            <p>
+                We go beyond logos, crafting moments your audience will remember.
+                Each brand partnership is immersive and bold.
+            </p>
+        </div>
+
+        <div class="card red">
+            <h3>Custom Festival Kits</h3>
+            <p>
+                Co-create limited-edition gift boxes, samples, and branded
+                collectibles designed for exclusivity.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>AR Photo Filter Zone</h3>
+            <p>
+                Engage guests through interactive filters designed for sharing,
+                virality, and brand storytelling.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Signature Sponsor Dish</h3>
+            <p>
+                Place your brand at the center of taste with custom dishes,
+                packaging, and premium presentation.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
